@@ -8,9 +8,14 @@ const req = require("express/lib/request");
 main().catch((err) => console.log(err));
 
 async function main() {
-  await mongoose.connect("mongodb://127.0.0.1:27017/unstop");
-  console.log("db connected");
+  // await mongoose.connect("mongodb://127.0.0.1:27017/unstop");
+  await mongoose.connect("mongodb+srv://pranjal:D182D6Evfz7hh36G@atlascluster.qxytknd.mongodb.net/?retryWrites=true&w=majority");
 
+  // await mongoose.connect("mongodb+srv://atlascluster.qxytknd.mongodb.net/test");
+
+  
+  console.log("db connected");
+  
   // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
 }
 
